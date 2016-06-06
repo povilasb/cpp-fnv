@@ -16,14 +16,13 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wextra -pedantic")
 set(src_dir "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(include_dir "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-file(GLOB_RECURSE src_files "${src_dir}/*.cc")
+file(GLOB_RECURSE src_files "${src_dir}/*.cpp")
 add_library("${lib_cpp_fnv}" STATIC ${src_files})
 
 include_directories(${include_dir})
-include_directories(${src_dir})
 
 
 # Testing rules.
 if (CPPFNV_ENABLE_TESTS)
-	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test)
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
 endif()

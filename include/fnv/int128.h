@@ -9,8 +9,6 @@
 
 #include <iosfwd>
 
-#include "net/base/net_export.h"
-
 struct uint128_pod;
 
 // An unsigned 128-bit integer type. Thread-compatible.
@@ -47,7 +45,7 @@ class uint128 {
   friend uint64_t Uint128High64(const uint128& v);
 
   // We add "std::" to avoid including all of port.h.
-  friend NET_EXPORT_PRIVATE std::ostream& operator<<(std::ostream& o,
+  friend std::ostream& operator<<(std::ostream& o,
                                                      const uint128& b);
 
  private:
@@ -76,10 +74,10 @@ struct uint128_pod {
   uint64_t lo;
 };
 
-NET_EXPORT_PRIVATE extern const uint128_pod kuint128max;
+extern const uint128_pod kuint128max;
 
 // allow uint128 to be logged
-NET_EXPORT_PRIVATE extern std::ostream& operator<<(std::ostream& o,
+extern std::ostream& operator<<(std::ostream& o,
                                                    const uint128& b);
 
 // Methods to access low and high pieces of 128-bit value.

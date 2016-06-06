@@ -2,9 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-#include "net/base/int128.h"
-
 #include <ostream>
+
+#include <fnv/int128.h>
 
 const uint128_pod kuint128max = {static_cast<uint64_t>(0xFFFFFFFFFFFFFFFFULL),
                                  static_cast<uint64_t>(0xFFFFFFFFFFFFFFFFULL)};
