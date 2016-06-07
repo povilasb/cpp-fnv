@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
 
-option(CPPFNV_ENABLE_TESTS "Enables or disables tests. Disabled by default."
-	OFF)
-
 project(cpp-fnv CXX)
 set(lib_cpp_fnv "${PROJECT_NAME}")
 set(example1 "example1")
